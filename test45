@@ -1,0 +1,96 @@
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_IMSI_UNKNOWN_IN_HSS 0x02
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_ILLEGAL_UE 0x03
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_IMEI_NOT_ACCEPTED 0x05
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_ILLEGAL_ME 0x06
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED 0x07
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED 0x08
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK 0x09
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_IMPLICITLY_DETACHED 0x0A
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_PLMN_NOT_ALLOWED 0x0B
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_TRACKING_AREA_NOT_ALLOWED 0x0C
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_ROAMING_NOT_ALLOWED_IN_THIS_TRACKING_AREA 0x0D
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED_IN_THIS_PLMN 0x0E
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_NO_SUITABLE_CELLS_IN_TRACKING_AREA 0x0F
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_MSC_TEMPORARILY_NOT_REACHABLE 0x10
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_NETWORK_FAILURE 0x11
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_CS_DOMAIN_NOT_AVAILABLE 0x12
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_ESM_FAILURE 0x13
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_MAC_FAILURE 0x14
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_SYNCH_FAILURE 0x15
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_CONGESTION 0x16
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_UE_SECURITY_CAPABILITIES_MISMATCH 0x17
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_SECURITY_MODE_REJECTED_UNSPECIFIED 0x18
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_NOT_AUTHORIZED_FOR_THIS_CSG 0x19
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_NON_EPS_AUTHENTICATION_UNACCEPTABLE 0x1A
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_REQUESTED_SERVICE_OPTION_NOT_AUTHORIZED 0x23
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_CS_SERVICE_TEMPORARILY_NOT_AVAILABLE 0x27
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_NO_EPS_BEARER_CONTEXT_ACTIVATED 0x28
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_SEMANTICALLY_INCORRECT_MESSAGE 0x5F
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_INVALID_MANDATORY_INFORMATION 0x60
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_MESSAGE_TYPE_NON_EXISTENT_OR_NOT_IMPLEMENTED 0x61
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_MESSAGE_TYPE_NOT_COMPATIBLE_WITH_THE_PROTOCOL_STATE 0x62
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_INFORMATION_ELEMENT_NON_EXISTENT_OR_NOT_IMPLEMENTED 0x63
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_CONDITIONAL_IE_ERROR 0x64
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_MESSAGE_NOT_COMPATIBLE_WITH_THE_PROTOCOL_STATE 0x65
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_PROTOCOL_ERROR_UNSPECIFIED 0x6F
+lib/include/srsran/asn1/liblte_mme.h:#define LIBLTE_MME_EMM_CAUSE_IEI 0x53
+lib/include/srsran/asn1/liblte_mme.h:} LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT;
+lib/include/srsran/asn1/liblte_mme.h:LIBLTE_ERROR_ENUM liblte_mme_pack_emm_information_msg(LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT* emm_info,
+lib/include/srsran/asn1/liblte_mme.h:                                                        LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT* emm_info);
+lib/include/srsran/asn1/liblte_mme.h:} LIBLTE_MME_EMM_STATUS_MSG_STRUCT;
+lib/include/srsran/asn1/liblte_mme.h:LIBLTE_ERROR_ENUM liblte_mme_pack_emm_status_msg(LIBLTE_MME_EMM_STATUS_MSG_STRUCT* emm_status,
+lib/include/srsran/asn1/liblte_mme.h:                                                   LIBLTE_MME_EMM_STATUS_MSG_STRUCT* emm_status);
+lib/test/asn1/nas_decoder.cc:      LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT emm_info;
+lib/test/asn1/nas_decoder.cc:      LIBLTE_MME_EMM_STATUS_MSG_STRUCT emm_status;
+lib/src/asn1/liblte_mme.cc:      *msg_ptr = LIBLTE_MME_EMM_CAUSE_IEI;
+lib/src/asn1/liblte_mme.cc:    if (LIBLTE_MME_EMM_CAUSE_IEI == *msg_ptr) {
+lib/src/asn1/liblte_mme.cc:LIBLTE_ERROR_ENUM liblte_mme_pack_emm_information_msg(LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT* emm_info,
+lib/src/asn1/liblte_mme.cc:                                                        LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT* emm_info)
+lib/src/asn1/liblte_mme.cc:LIBLTE_ERROR_ENUM liblte_mme_pack_emm_status_msg(LIBLTE_MME_EMM_STATUS_MSG_STRUCT* emm_status,
+lib/src/asn1/liblte_mme.cc:                                                   LIBLTE_MME_EMM_STATUS_MSG_STRUCT* emm_status)
+lib/src/asn1/liblte_mme.cc:      *msg_ptr = LIBLTE_MME_EMM_CAUSE_IEI;
+lib/src/asn1/liblte_mme.cc:    if (LIBLTE_MME_EMM_CAUSE_IEI == *msg_ptr) {
+Fichier binaire build/lib/test/asn1/nas_decoder correspondant
+Fichier binaire build/lib/test/asn1/srsran_asn1_nas_test correspondant
+Fichier binaire build/lib/test/asn1/CMakeFiles/nas_decoder.dir/nas_decoder.cc.o correspondant
+Fichier binaire build/lib/src/asn1/libsrsran_asn1.a correspondant
+Fichier binaire build/lib/src/asn1/CMakeFiles/srsran_asn1.dir/liblte_mme.cc.o correspondant
+Fichier binaire build/srsue/src/srsue correspondant
+Fichier binaire build/srsue/src/stack/rrc/test/rrc_reconfig_test correspondant
+Fichier binaire build/srsue/src/stack/rrc/test/rrc_meas_test correspondant
+Fichier binaire build/srsue/src/stack/upper/libsrsue_upper.a correspondant
+Fichier binaire build/srsue/src/stack/upper/CMakeFiles/srsue_upper.dir/nas.cc.o correspondant
+Fichier binaire build/srsue/src/stack/upper/test/nas_test correspondant
+Fichier binaire build/srsepc/src/srsepc correspondant
+Fichier binaire build/srsepc/src/mme/libsrsepc_mme.a correspondant
+Fichier binaire build/srsepc/src/mme/CMakeFiles/srsepc_mme.dir/nas.cc.o correspondant
+srsue/hdr/stack/upper/nas.h:  std::string emm_info_str(LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT* info);
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_NOT_AUTHORIZED_FOR_THIS_CSG) {
+srsue/src/stack/upper/nas.cc:  if (attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_PLMN_NOT_ALLOWED ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_TRACKING_AREA_NOT_ALLOWED ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_ROAMING_NOT_ALLOWED_IN_THIS_TRACKING_AREA ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED_IN_THIS_PLMN ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_NO_SUITABLE_CELLS_IN_TRACKING_AREA ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_NOT_AUTHORIZED_FOR_THIS_CSG) {
+srsue/src/stack/upper/nas.cc:  if (attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_ILLEGAL_UE ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_ILLEGAL_ME ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_REQUESTED_SERVICE_OPTION_NOT_AUTHORIZED) {
+srsue/src/stack/upper/nas.cc:  if (attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_ROAMING_NOT_ALLOWED_IN_THIS_TRACKING_AREA ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED_IN_THIS_PLMN ||
+srsue/src/stack/upper/nas.cc:      attach_rej.emm_cause == LIBLTE_MME_EMM_CAUSE_NETWORK_FAILURE) {
+srsue/src/stack/upper/nas.cc:    send_authentication_failure(LIBLTE_MME_EMM_CAUSE_SYNCH_FAILURE, res);
+srsue/src/stack/upper/nas.cc:    send_authentication_failure(LIBLTE_MME_EMM_CAUSE_MAC_FAILURE, nullptr);
+srsue/src/stack/upper/nas.cc:      send_security_mode_reject(LIBLTE_MME_EMM_CAUSE_SECURITY_MODE_REJECTED_UNSPECIFIED);
+srsue/src/stack/upper/nas.cc:    send_security_mode_reject(LIBLTE_MME_EMM_CAUSE_UE_SECURITY_CAPABILITIES_MISMATCH);
+srsue/src/stack/upper/nas.cc:    send_security_mode_reject(LIBLTE_MME_EMM_CAUSE_UE_SECURITY_CAPABILITIES_MISMATCH);
+srsue/src/stack/upper/nas.cc:    send_security_mode_reject(LIBLTE_MME_EMM_CAUSE_MAC_FAILURE);
+srsue/src/stack/upper/nas.cc:      service_reject.emm_cause == LIBLTE_MME_EMM_CAUSE_NOT_AUTHORIZED_FOR_THIS_CSG) {
+srsue/src/stack/upper/nas.cc:  LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT emm_info = {};
+srsue/src/stack/upper/nas.cc:  LIBLTE_MME_EMM_STATUS_MSG_STRUCT emm_status;
+srsue/src/stack/upper/nas.cc:std::string nas::emm_info_str(LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT* info)
+srsepc/src/mme/nas.cc:    nas_tmp.pack_service_reject(nas_tx.get(), LIBLTE_MME_EMM_CAUSE_IMPLICITLY_DETACHED);
+srsepc/src/mme/nas.cc:    nas_tmp.pack_service_reject(nas_tx.get(), LIBLTE_MME_EMM_CAUSE_IMPLICITLY_DETACHED);
+srsepc/src/mme/nas.cc:    nas_ctx->pack_service_reject(nas_tx.get(), LIBLTE_MME_EMM_CAUSE_UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK);
+srsepc/src/mme/nas.cc:  pack_tracking_area_update_reject(nas_tx.get(), LIBLTE_MME_EMM_CAUSE_IMPLICITLY_DETACHED);
+srsepc/src/mme/nas.cc:  LIBLTE_MME_EMM_INFORMATION_MSG_STRUCT emm_info;
+srsepc/src/mme/nas.cc:  if (emm_cause == LIBLTE_MME_EMM_CAUSE_CONGESTION) {

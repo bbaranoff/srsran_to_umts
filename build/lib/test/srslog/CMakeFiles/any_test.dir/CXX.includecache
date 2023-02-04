@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/include/srsran/srslog/detail/support/any.h
+memory
+-
+type_traits
+-
+
+/home/nirvana/srslte/lib/test/srslog/any_test.cpp
+srsran/srslog/detail/support/any.h
+/home/nirvana/srslte/lib/test/srslog/srsran/srslog/detail/support/any.h
+testing_helpers.h
+/home/nirvana/srslte/lib/test/srslog/testing_helpers.h
+
+/home/nirvana/srslte/lib/test/srslog/testing_helpers.h
+cstdio
+-
+

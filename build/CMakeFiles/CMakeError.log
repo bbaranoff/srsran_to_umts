@@ -1,0 +1,165 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/nirvana/srslte/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e5662/fast && /usr/bin/make -f CMakeFiles/cmTC_e5662.dir/build.make CMakeFiles/cmTC_e5662.dir/build
+make[1] : on entre dans le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_e5662.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e5662.dir/src.c.o   -c /home/nirvana/srslte/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e5662
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5662.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_e5662.dir/src.c.o  -o cmTC_e5662 
+/usr/bin/ld : CMakeFiles/cmTC_e5662.dir/src.c.o : dans la fonction « main » :
+src.c:(.text+0x3e) : référence indéfinie vers « pthread_create »
+/usr/bin/ld : src.c:(.text+0x4a) : référence indéfinie vers « pthread_detach »
+/usr/bin/ld : src.c:(.text+0x5b) : référence indéfinie vers « pthread_join »
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e5662.dir/build.make:87 : cmTC_e5662] Erreur 1
+make[1] : on quitte le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+make: *** [Makefile:121 : cmTC_e5662/fast] Erreur 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nirvana/srslte/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fac49/fast && /usr/bin/make -f CMakeFiles/cmTC_fac49.dir/build.make CMakeFiles/cmTC_fac49.dir/build
+make[1] : on entre dans le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_fac49.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fac49.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fac49
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fac49.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fac49.dir/CheckFunctionExists.c.o  -o cmTC_fac49  -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_fac49.dir/build.make:87 : cmTC_fac49] Erreur 1
+make[1] : on quitte le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+make: *** [Makefile:121 : cmTC_fac49/fast] Erreur 2
+
+
+
+Performing C++ SOURCE FILE Test UHD_ENABLE_X300_FW_RESET failed with the following output:
+Change Dir: /home/nirvana/srslte/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_489bb/fast && /usr/bin/make -f CMakeFiles/cmTC_489bb.dir/build.make CMakeFiles/cmTC_489bb.dir/build
+make[1] : on entre dans le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_489bb.dir/src.cxx.o
+/usr/bin/c++    -DUHD_ENABLE_X300_FW_RESET  -L/usr/lib/x86_64-linux-gnu   -o CMakeFiles/cmTC_489bb.dir/src.cxx.o -c /home/nirvana/srslte/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_489bb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_489bb.dir/link.txt --verbose=1
+/usr/bin/c++   -DUHD_ENABLE_X300_FW_RESET  -L/usr/lib/x86_64-linux-gnu    CMakeFiles/cmTC_489bb.dir/src.cxx.o  -o cmTC_489bb  -luhd -lboost_program_options -lboost_system 
+/usr/bin/ld : CMakeFiles/cmTC_489bb.dir/src.cxx.o : dans la fonction « try_usrp_x300_reset() » :
+src.cxx:(.text+0x152) : référence indéfinie vers « x300_make_ctrl_iface_enet(boost::shared_ptr<uhd::transport::udp_simple>, bool) »
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_489bb.dir/build.make:87 : cmTC_489bb] Erreur 1
+make[1] : on quitte le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+make: *** [Makefile:121 : cmTC_489bb/fast] Erreur 2
+
+
+Source file was:
+#include <uhd.h>
+    #include <uhd/usrp/multi_usrp.hpp>
+    #include <uhd/transport/udp_simple.hpp>
+
+    uhd::wb_iface::sptr x300_make_ctrl_iface_enet(uhd::transport::udp_simple::sptr udp, bool enable_errors);
+
+    uhd_error try_usrp_x300_reset()
+    {
+      uhd::transport::udp_simple::sptr udp_simple = uhd::transport::udp_simple::make_connected("", "49152");
+      uhd::wb_iface::sptr x300_ctrl = x300_make_ctrl_iface_enet(udp_simple, true);
+      x300_ctrl->poke32(0x100058, 1);
+      return UHD_ERROR_NONE;
+    }
+
+    int main(int argc, char** argv)
+    {
+      try_usrp_x300_reset();
+      return 0;
+    }
+Performing C++ SOURCE FILE Test UHD_ENABLE_CUSTOM_RFNOC failed with the following output:
+Change Dir: /home/nirvana/srslte/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_49b8b/fast && /usr/bin/make -f CMakeFiles/cmTC_49b8b.dir/build.make CMakeFiles/cmTC_49b8b.dir/build
+make[1] : on entre dans le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_49b8b.dir/src.cxx.o
+/usr/bin/c++    -DUHD_ENABLE_CUSTOM_RFNOC  -L/usr/lib/x86_64-linux-gnu   -o CMakeFiles/cmTC_49b8b.dir/src.cxx.o -c /home/nirvana/srslte/build/CMakeFiles/CMakeTmp/src.cxx
+/home/nirvana/srslte/build/CMakeFiles/CMakeTmp/src.cxx:3:14: fatal error: uhd/rfnoc/ddc_ch2_block_ctrl.hpp: Aucun fichier ou dossier de ce type
+     #include <uhd/rfnoc/ddc_ch2_block_ctrl.hpp>
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_49b8b.dir/build.make:66 : CMakeFiles/cmTC_49b8b.dir/src.cxx.o] Erreur 1
+make[1] : on quitte le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+make: *** [Makefile:121 : cmTC_49b8b/fast] Erreur 2
+
+
+Source file was:
+#include <uhd.h>
+    #include <uhd/device3.hpp>
+    #include <uhd/rfnoc/ddc_ch2_block_ctrl.hpp>
+
+    static uhd::device3::sptr device3;
+    static uhd::rfnoc::ddc_ch2_block_ctrl::sptr ddc_ctrl;
+
+    uhd_error try_device3_ddc_ch2_ctrl()
+    {
+      ddc_ctrl = device3->get_block_ctrl<uhd::rfnoc::ddc_ch2_block_ctrl>(uhd::rfnoc::block_id_t("DDCch2_0"));
+      return UHD_ERROR_NONE;
+    }
+
+    int main(int argc, char** argv)
+    {
+      try_device3_ddc_ch2_ctrl();
+      return 0;
+    }
+Performing C SOURCE FILE Test HAVE_AVX512 failed with the following output:
+Change Dir: /home/nirvana/srslte/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4a553/fast && /usr/bin/make -f CMakeFiles/cmTC_4a553.dir/build.make CMakeFiles/cmTC_4a553.dir/build
+make[1] : on entre dans le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_4a553.dir/src.c.o
+/usr/bin/cc   -DHAVE_AVX512 -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512   -o CMakeFiles/cmTC_4a553.dir/src.c.o   -c /home/nirvana/srslte/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4a553
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a553.dir/link.txt --verbose=1
+/usr/bin/cc  -DHAVE_AVX512 -mavx512f -mavx512cd -mavx512bw -mavx512dq -DLV_HAVE_AVX512    CMakeFiles/cmTC_4a553.dir/src.c.o  -o cmTC_4a553 
+make[1] : on quitte le répertoire « /home/nirvana/srslte/build/CMakeFiles/CMakeTmp »
+
+
+Return value: FAILED_TO_RUN
+Source file was:
+
+          #include <immintrin.h>
+          int main()
+          {
+            __m512i a, b, c;
+            const int src[16] = { 0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8 , 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF};
+            int dst[16];
+            a =  _mm512_loadu_si512( (__m512i*)src );
+            b =  _mm512_loadu_si512( (__m512i*)src );
+            c = _mm512_add_epi32( a, b );
+            _mm512_storeu_si512( (__m512i*)dst, c );
+            int i = 0;
+            for( i = 0; i < 16; i++ ){
+              if( ( src[i] + src[i] ) != dst[i] ){
+                return -1;
+              }
+            }
+            return 0;
+          }

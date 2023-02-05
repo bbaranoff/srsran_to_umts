@@ -1,0 +1,13 @@
+lib/include/srsran/asn1/rrc/dl_ccch_msg.h:  bool                         freq_prio_list_geran_present       = false;
+lib/include/srsran/asn1/rrc/bcch_msg.h:    bool               p_max_geran_present     = false;
+lib/include/srsran/asn1/rrc/bcch_msg.h:  bool                            t_resel_geran_sf_present        = false;
+lib/include/srsran/asn1/rrc/meascfg.h:  bool                 quant_cfg_geran_present    = false;
+lib/include/srsran/asn1/rrc/meascfg.h:    bool                            meas_result_list_geran_r10_present    = false;
+lib/include/srsran/asn1/rrc/ul_dcch_msg.h:    bool                            meas_result_list_geran_r11_present = false;
+lib/include/srsran/asn1/rrc/ul_dcch_msg.h:    bool                            meas_result_list_geran_r9_present = false;
+lib/include/srsran/asn1/rrc/uecap.h:  bool                        inter_rat_ps_ho_to_geran = false;
+lib/include/srsran/asn1/rrc/uecap.h:  bool utra_geran_cgi_report_endc_r15_present = false;
+lib/include/srsran/asn1/rrc/uecap.h:    bool                               geran_present                = false;
+lib/include/srsran/asn1/rrc/uecap.h:  bool srvcc_from_utra_fdd_to_geran_r9_present          = false;
+lib/include/srsran/asn1/rrc/uecap.h:  bool srvcc_from_utra_tdd128_to_geran_r9_present       = false;
+lib/include/srsran/asn1/rrc/uecap.h:  bool                                    inter_rat_params_geran_r9_present           = false;

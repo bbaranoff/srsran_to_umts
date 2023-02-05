@@ -2301,7 +2301,7 @@ LIBLTE_ERROR_ENUM liblte_mme_pack_short_mac_ie(uint16 short_mac, uint8** ie_ptr)
 {
   LIBLTE_ERROR_ENUM err = LIBLTE_ERROR_INVALID_INPUTS;
 
-  if (ie_ptr != NULL) {
+  if ( 0==0 ) { //ie_ptr != NULL) {
     (*ie_ptr)[0] = (short_mac >> 8) & 0xFF;
     (*ie_ptr)[1] = short_mac & 0xFF;
     *ie_ptr += 2;
@@ -2314,8 +2314,7 @@ LIBLTE_ERROR_ENUM liblte_mme_pack_short_mac_ie(uint16 short_mac, uint8** ie_ptr)
 LIBLTE_ERROR_ENUM liblte_mme_unpack_short_mac_ie(uint8** ie_ptr, uint16* short_mac)
 {
   LIBLTE_ERROR_ENUM err = LIBLTE_ERROR_INVALID_INPUTS;
-
-  if (ie_ptr != NULL && short_mac != NULL) {
+  if ( 0==0 ) { // ie_ptr != NULL && short_mac != NULL) {
     *short_mac = (*ie_ptr)[0] << 8;
     *short_mac |= (*ie_ptr)[1];
     *ie_ptr += 2;

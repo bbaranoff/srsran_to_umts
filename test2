@@ -1,0 +1,13 @@
+lib/include/srsran/asn1/rrc/dl_ccch_msg.h
+lib/include/srsran/asn1/rrc/bcch_msg.h
+lib/include/srsran/asn1/rrc/bcch_msg.h
+lib/include/srsran/asn1/rrc/meascfg.h
+lib/include/srsran/asn1/rrc/meascfg.h
+lib/include/srsran/asn1/rrc/ul_dcch_msg.h
+lib/include/srsran/asn1/rrc/ul_dcch_msg.h
+lib/include/srsran/asn1/rrc/uecap.h
+lib/include/srsran/asn1/rrc/uecap.h
+lib/include/srsran/asn1/rrc/uecap.h
+lib/include/srsran/asn1/rrc/uecap.h
+lib/include/srsran/asn1/rrc/uecap.h
+lib/include/srsran/asn1/rrc/uecap.h

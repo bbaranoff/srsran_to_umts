@@ -401,7 +401,7 @@ typedef enum {
   LIBLTE_MME_ADDITIONAL_UPDATE_RESULT_N_ITEMS,
 } LIBLTE_MME_ADDITIONAL_UPDATE_RESULT_ENUM;
 static const char liblte_mme_additional_update_result_text[LIBLTE_MME_ADDITIONAL_UPDATE_RESULT_N_ITEMS][100] =
-    {"No Additional Information", "CS Fallback Not Preferred", "SMS Only", "RESERVED"};
+    {"No Additional Information", "CS Fallback Preferred", "SMS Only", "RESERVED"};
 // Structs
 // Functions
 LIBLTE_ERROR_ENUM liblte_mme_pack_additional_update_result_ie(LIBLTE_MME_ADDITIONAL_UPDATE_RESULT_ENUM result,

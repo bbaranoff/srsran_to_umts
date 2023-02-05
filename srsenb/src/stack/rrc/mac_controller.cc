@@ -193,7 +193,7 @@ int mac_controller::apply_basic_conn_cfg(const asn1::rrc::rr_cfg_ded_s& rr_cfg)
 
   // Configure MAC
   // In case of RRC Connection Setup/Reest message (Msg4), we need to resolve the contention by sending a ConRes CE
-  mac->phy_config_enabled(rnti, false);
+  mac->phy_config_enabled(rnti, true);
   crnti_set = true;
   return mac->ue_set_crnti(rnti, rnti, current_sched_ue_cfg);
 }

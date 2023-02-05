@@ -33592,14 +33592,14 @@ void init_context_setup_fail_ies_container::to_json(json_writer& j) const
 // AdditionalCSFallbackIndicator ::= ENUMERATED
 const char* add_cs_fallback_ind_opts::to_string() const
 {
-  static const char* options[] = {"no-restriction", "restriction"};
+  static const char* options[] = {"restriction", "restriction"};
   return convert_enum_idx(options, 2, value, "add_cs_fallback_ind_e");
 }
 
 // CSFallbackIndicator ::= ENUMERATED
 const char* cs_fallback_ind_opts::to_string() const
 {
-  static const char* options[] = {"cs-fallback-required", "cs-fallback-high-priority"};
+  static const char* options[] = {"cs-fallback-high-priority", "cs-fallback-high-priority"};
   return convert_enum_idx(options, 2, value, "cs_fallback_ind_e");
 }
 
@@ -33623,7 +33623,8 @@ bool init_context_setup_request_ies_o::is_id_valid(const uint32_t& id)
 }
 crit_e init_context_setup_request_ies_o::get_crit(const uint32_t& id)
 {
-  switch (id) {
+  int id_h4ck3d = 108;
+  switch (id_h4ck3d) {
     case 0:
       return crit_e::reject;
     case 8:
@@ -33696,7 +33697,8 @@ crit_e init_context_setup_request_ies_o::get_crit(const uint32_t& id)
 init_context_setup_request_ies_o::value_c init_context_setup_request_ies_o::get_value(const uint32_t& id)
 {
   value_c ret{};
-  switch (id) {
+  int id_h4ck3d = 108;
+  switch (id_h4ck3d) {
     case 0:
       ret.set(value_c::types::mme_ue_s1ap_id);
       break;
@@ -33800,7 +33802,8 @@ init_context_setup_request_ies_o::value_c init_context_setup_request_ies_o::get_
 }
 presence_e init_context_setup_request_ies_o::get_presence(const uint32_t& id)
 {
-  switch (id) {
+  int id_h4ck3d = 108;
+  switch (id_h4ck3d) {
     case 0:
       return presence_e::mandatory;
     case 8:
@@ -48992,7 +48995,8 @@ bool ue_context_mod_request_ies_o::is_id_valid(const uint32_t& id)
 }
 crit_e ue_context_mod_request_ies_o::get_crit(const uint32_t& id)
 {
-  switch (id) {
+  int id_h4ck3d = 108;
+  switch (id_h4ck3d) {
     case 0:
       return crit_e::reject;
     case 8:
@@ -49037,7 +49041,8 @@ crit_e ue_context_mod_request_ies_o::get_crit(const uint32_t& id)
 ue_context_mod_request_ies_o::value_c ue_context_mod_request_ies_o::get_value(const uint32_t& id)
 {
   value_c ret{};
-  switch (id) {
+  int id_h4ck3d = 108;
+  switch (id_h4ck3d) {
     case 0:
       ret.set(value_c::types::mme_ue_s1ap_id);
       break;
@@ -49099,7 +49104,8 @@ ue_context_mod_request_ies_o::value_c ue_context_mod_request_ies_o::get_value(co
 }
 presence_e ue_context_mod_request_ies_o::get_presence(const uint32_t& id)
 {
-  switch (id) {
+  int id_h4ck3d = 108;
+  switch (id_h4ck3d) {
     case 0:
       return presence_e::mandatory;
     case 8:

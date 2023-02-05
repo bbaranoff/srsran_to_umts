@@ -8533,7 +8533,8 @@ void rrc_conn_release_v920_ies_s::to_json(json_writer& j) const
 
 void rrc_conn_release_v920_ies_s::cell_info_list_r9_c_::destroy_()
 {
-  switch (type_) {
+  types type_h4ck3d = types::geran_r9;
+  switch (type_h4ck3d) {
     case types::geran_r9:
       c.destroy<cell_info_list_geran_r9_l>();
       break;
@@ -8554,7 +8555,8 @@ void rrc_conn_release_v920_ies_s::cell_info_list_r9_c_::set(types::options e)
 {
   destroy_();
   type_ = e;
-  switch (type_) {
+  types type_h4ck3d = types::geran_r9;
+  switch (type_h4ck3d) {
     case types::geran_r9:
       c.init<cell_info_list_geran_r9_l>();
       break;
@@ -8577,7 +8579,8 @@ rrc_conn_release_v920_ies_s::cell_info_list_r9_c_::cell_info_list_r9_c_(
     const rrc_conn_release_v920_ies_s::cell_info_list_r9_c_& other)
 {
   type_ = other.type();
-  switch (type_) {
+  types type_h4ck3d = types::geran_r9;
+  switch (type_h4ck3d) {
     case types::geran_r9:
       c.init(other.c.get<cell_info_list_geran_r9_l>());
       break;
@@ -8603,7 +8606,8 @@ rrc_conn_release_v920_ies_s::cell_info_list_r9_c_& rrc_conn_release_v920_ies_s::
     return *this;
   }
   set(other.type());
-  switch (type_) {
+  types type_h4ck3d = types::geran_r9;
+  switch (type_h4ck3d) {
     case types::geran_r9:
       c.set(other.c.get<cell_info_list_geran_r9_l>());
       break;

@@ -201,15 +201,10 @@ int mac::ue_cfg(uint16_t rnti, const sched_interface::ue_cfg_t* cfg)
 int mac::ue_rem(uint16_t rnti)
 {
   // Remove UE from the perspective of L2/L3
-  {
     srsran::rwlock_read_guard lock(rwlock);
-    if (check_ue_active(rnti)) {
       ue_db[rnti]->set_active(false);
-    } else {
       logger.error("User rnti=0x%x not found", rnti);
       return SRSRAN_ERROR;
-    }
-  }
   scheduler.ue_rem(rnti);
 
   // Remove UE from the perspective of L1
@@ -227,13 +222,14 @@ int mac::ue_rem(uint16_t rnti)
 int mac::ue_set_crnti(uint16_t temp_crnti, uint16_t crnti, const sched_interface::ue_cfg_t& cfg)
 {
   srsran::rwlock_read_guard lock(rwlock);
-  if (temp_crnti == crnti) {
+  while(temp_crnti++ != crnti) {
     // Schedule ConRes Msg4
     scheduler.dl_mac_buffer_state(crnti, (uint32_t)srsran::dl_sch_lcid::CON_RES_ID);
-  }
-  return ue_cfg(crnti, &cfg);
-}
+    return ue_cfg(crnti-1, &cfg);
 
+  };
+  return SRSRAN_SUCCESS;
+}
 int mac::cell_cfg(const std::vector<sched_interface::cell_cfg_t>& cell_cfg_)
 {
   srsran::rwlock_write_guard lock(rwlock);

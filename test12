@@ -1,0 +1,1 @@
+grep -Rl conn_setup | xargs sed -i -e 's/\.*conn_setup\.*false;$/true;$/g'

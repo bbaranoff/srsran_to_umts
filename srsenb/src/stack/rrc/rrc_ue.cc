@@ -350,13 +350,14 @@ void rrc::ue::parse_ul_dcch(uint32_t lcid, srsran::unique_byte_buffer_t pdu)
 
   transaction_id = 0;
 
-  switch (ul_dcch_msg.msg.c1().type()) {
-    case ul_dcch_msg_type_c::c1_c_::types::rrc_conn_setup_complete:
+//    case ul_dcch_msg_type_c::c1_c_::types::rrc_conn_setup_complete:
       save_ul_message(std::move(original_pdu));
       handle_rrc_con_setup_complete(&ul_dcch_msg.msg.c1().rrc_conn_setup_complete(), std::move(pdu));
       set_activity_timeout(UE_INACTIVITY_TIMEOUT);
       set_activity();
-      break;
+//      break;
+/*
+  switch (ul_dcch_msg.msg.c1().type()) {
     case ul_dcch_msg_type_c::c1_c_::types::rrc_conn_reest_complete:
       save_ul_message(std::move(original_pdu));
       handle_rrc_con_reest_complete(&ul_dcch_msg.msg.c1().rrc_conn_reest_complete(), std::move(pdu));
@@ -429,7 +430,7 @@ void rrc::ue::parse_ul_dcch(uint32_t lcid, srsran::unique_byte_buffer_t pdu)
     default:
       parent->logger.error("Msg: %s not supported", ul_dcch_msg.msg.c1().type().to_string());
       break;
-  }
+  }*/
 }
 
 std::string rrc::ue::to_string(const activity_timeout_type_t& type)

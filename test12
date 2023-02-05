@@ -1,0 +1,5 @@
+grep -Rl srvcc | xargs sed -i -e 's/\.*srvcc\.*false/true;$/g'
+grep -Rl cdma2000 | xargs sed -i -e 's/\.*cdma2000\.*true/.*false;$/g'
+grep -Rl utra | xargs sed -i -e 's/\.*utra\.*true/false;$/g'
+grep -Rl eutra | xargs sed -i -e 's/\.*eutra\.*true/false;$/g'
+grep -Rl geran | xargs sed -i -e 's/\.*geran.\.*false/.*true;$/g'

@@ -1718,9 +1718,9 @@ bool nas::pack_service_reject(srsran::byte_buffer_t* nas_buffer, uint8_t emm_cau
 bool nas::pack_tracking_area_update_reject(srsran::byte_buffer_t* nas_buffer, uint8_t emm_cause)
 {
   LIBLTE_MME_TRACKING_AREA_UPDATE_REJECT_MSG_STRUCT tau_rej;
-  tau_rej.t3446_present = false;
+  tau_rej.t3446_present = true;
   tau_rej.t3446         = 0;
-  tau_rej.emm_cause     = emm_cause;
+  tau_rej.emm_cause     = LIBLTE_MME_EMM_CAUSE_UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK;
 
   if (emm_cause == LIBLTE_MME_EMM_CAUSE_CONGESTION) {
     // Standard would want T3446 set in this case
